@@ -1,0 +1,10 @@
+<h3>レポート</h3>
+サイコロは今までに<%= @count %>回振られました。<br/>
+
+<h3>統計</h3>
+<ul>
+	<% @statistics.each do |value, count| -%>
+		<li><%= value %>: <%= count %>回</li>
+	<% end -%>
+</ul>
+

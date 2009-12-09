@@ -1,0 +1,18 @@
+<h3>丁半ゲーム</h3>
+
+<% form_tag do %>
+  <%= select_tag(:expected, 
+      options_for_select(%W{丁 半}, params[:expcted])) %>
+  <%= submit_tag "勝負！" %>
+<% end %>
+
+<% unless @result.nil? -%>
+	出目は <%= @d1 %> と <%= @d2 %> で <%= @sum %> <br/>
+	あなたの手は <%= @input %> <br/>
+	<% if @result == :win -%>
+    あなたの勝ちです。
+	<% else -%>
+    あなたの負けです。
+	<% end %>
+<% end -%>
+
