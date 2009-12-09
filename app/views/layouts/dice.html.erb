@@ -4,7 +4,13 @@
 	</head>
 	<body>
 		<h1>サイコロ</h1>
-		<%= yield %>
+		<ul>
+			<li><%= link_to("ホーム", :action => "index") %></li>
+			<li><%= link_to("サイコロを振る", :action => "shake") %></li>
+		</ul>
+		<%= yield  %>
+		<hr/>
+		<p>create by zantare p:3005</p>
 	</body>
 </html>
 

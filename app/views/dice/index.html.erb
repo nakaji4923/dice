@@ -1,1 +1,8 @@
-<%= link_to "サイコロを振る", :action => "shake" %>
+<h3>履歴</h3>
+<ul>
+<% @rolls.each do |roll| %>
+	<li>
+	<%= roll.value %>
+	</li>
+<% end %>
+</ul>
